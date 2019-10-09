@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<tittle></tittle>
+<link rel="stylesheet" type="text/css" href="homestylepage1.css">
+<style>
+header {
+    background-color: #666;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color:brown;
+  }
+
+    body{
+        background-color: aqua;
+    }
+    input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=email], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+textarea, select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button{
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.form{
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+</head>
+<body >
+
+<header>
+
+<div id="form">
+    <form method="POST" action="home.html">
+        Name:
+        <input type="text" id="name" name="firstname"><br>
+        Gender:
+        <input type="radio" name="gender" value="male" checked> Male
+        <input type="radio" name="gender" value="female"> Female
+        <input type="radio" name="gender" value="other"> Other<br>
+        Email Id:
+        <input type="text" id="email" name="email"><br>
+        Phone Num:
+        <input type="text" id="num" name="firstname"><br>
+        Model:
+        <select name="cars">
+                <option value="alto">Alto 800</option>
+                <option value="k10">Alto k10</option>
+                <option value="baleno">Baleno</option>
+                <option value="swift">swift</option>
+                <option value="brezza">Brezza</option>
+              </select><br>
+         Complaint:<br>
+         <textarea name="complaint" id="address" rows="10" cols="30"></textarea><br>
+         <button type="button" onclick="check()">SUBMIT</button>
+</form>
+</div>
+           <script>
+function check(){
+    var x=document.getElementById('name').value
+    if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+  var y=document.getElementById('num').value
+  if (isNaN(y)) {
+    alert(" phone number is Invalid input");
+  }
+  var z=document.getElementById('address').value
+    if (z == "") {
+    alert("add some complaints");
+    return false;
+    }
+}
+           </script>   
+</body>
+</html>

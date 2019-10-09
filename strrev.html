@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <title>String Reverse</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        
+        #result {
+            height: 200px;
+            background-color: darkgrey;
+            text-align: center;
+            font-size: 25px;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Reverse a String</h1>
+    <form>
+        <label>Enter the String</label>
+        <input type="text" id="string">&nbsp;&nbsp;
+        <input type="button" value="Reverse" onclick="reverse()">
+    </form>
+    <div id="result"></div>
+    <script type="text/javascript">
+        function reverse() {
+            var s = document.getElementById("string").value;
+            var sr = ""
+            for (var i = (s.length) - 1; i >= 0; i--) {
+                sr = sr + s[i]
+            }
+            document.getElementById("result").innerHTML = sr;
+        }
+    </script>
+</body>
+
+</html>

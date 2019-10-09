@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Fibonacci Numbers Using JavaScript</title>
+<style>
+h1 {
+            text-align: center;
+        }
+        
+        #show {
+            height: 500px;
+            background-color: darkgrey;
+            
+            font-size: 23px;
+            font-style: italic;
+        }
+</style>
+		<script>
+			function on_btn_gen_click() {
+				count = parseInt(document.getElementById("inCount").value);
+				a = 0, b = 1, sum = 0;
+				output = "<b>The first " + count + " elements in the Fibonacci series:</b> ";
+
+				for(i = 0; i < count; i ++) {
+					output += a + " ";
+					sum = a + b;
+					a = b;
+					b = sum;
+				}
+
+				document.getElementById("pSeries").innerHTML = output;
+			}
+		</script>
+	</head>
+	<body>
+<h1>FIBANOCCI SERIES</h1>
+<form>
+Enter the numbers:
+<input type="text" id="num">
+<button type="button" Onclick="on_btn_gen_click()">SUBMIT</button>
+<div id="show"></div>
+		<script>
+			function on_btn_gen_click() {
+				count = parseInt(document.getElementById("num").value);
+				a = 0, b = 1, sum = 0;
+				output = "<b>The first " + count + " elements in the Fibonacci series:</b> ";
+
+				for(i = 0; i < count; i ++) {
+					output += a + " ";
+					sum = a + b;
+					a = b;
+					b = sum;
+				}
+
+				document.getElementById("show").innerHTML = output;
+			}
+		</script>
+	</body>
+</html>
